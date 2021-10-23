@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="15dp">
+
+    <TextView
+        android:id="@+id/notaSanoTxt"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/sanoBut"
+        android:layout_alignParentEnd="false"
+        android:layout_alignTop="@+id/sanoBut"
+        android:layout_column="1"
+        android:layout_gravity="center_vertical|end"
+        android:layout_row="1"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="#fff"
+        android:textSize="34dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/notaEcoTxt"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/ecoBut"
+        android:layout_alignStart="@+id/notaSanoTxt"
+        android:layout_alignTop="@+id/ecoBut"
+        android:layout_column="1"
+        android:layout_gravity="center_vertical|end"
+        android:layout_row="3"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/notaComTxt"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/comTxt"
+        android:layout_alignStart="@+id/notaEcoTxt"
+        android:layout_alignTop="@+id/comBut"
+        android:layout_column="1"
+        android:layout_gravity="center_vertical|end"
+        android:layout_row="5"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/productImg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_column="0"
+        android:layout_marginBottom="5dp"
+        android:layout_row="0" />
+
+    <TextView
+        android:id="@+id/notaLab"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_column="1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="38dp"
+        android:layout_row="0"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="9"
+        android:textColor="#000"
+        android:textSize="70sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/sanoBut"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_row="1"
+        android:background="#3F51B5"
+        android:elevation="0dp"
+        android:onClick="sanoBut"
+        android:text="Sano"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ecoBut"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_row="3"
+        android:background="#3F51B5"
+        android:onClick="ecoBut"
+        android:text="Ecológico"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/comBut"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_row="5"
+        android:background="#3F51B5"
+        android:onClick="comenBut"
+        android:text="Comentarios"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/sanoTxt"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="2"
+        android:textColor="#000"
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/ecoTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="top"
+        android:layout_row="4"
+        android:textColor="#000"
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/comTxt"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="6"
+        android:textColor="#000"
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+</GridLayout>

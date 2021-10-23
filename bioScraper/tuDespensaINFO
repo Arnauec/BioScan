@@ -1,0 +1,40 @@
+class of each product 
+<div class="c-cat-product-item js-cat-product-item"
+
+>>> response.css("div.c-cat-product-item__data")[0]
+
+response.css("div.c-cat-product-item__data")[0].extract()
+u'<div class="c-cat-product-item__data"><div class="c-cat-product-item__data-rating js-cat-product-item__rating"><div class="o-rating"><span class="js-rating__badge o-rating__badge">(6)</span><span class="o-rating__stars"><span class="js-rating__stars-i o-rating__stars-i" data-value="96.66666666" style="width:97%">\n            Valoraci\xf3n media:\n        </span></span><span class="o-rating__comments">2</span></div></div><div class="c-cat-product-item__name"><a href="/comprar/brik-de-caldo-online/gallina-blanca-caldo-de-pollo-15952/" title="Gallina Blanca Caldo de Pollo 472621" class="c-cat-product-item__href-name js-cat-product-item__lnk"><span class="c-cat-product-item__name-brand">Gallina Blanca</span><span class="c-cat-product-item__name-product">Caldo de Pollo</span></a><span class="c-cat-product-item__volume">Brik 1 lt </span></div><div class="c-cat-product-item__price"><div class="c-cat-product-item__price-divider"><span class="c-cat-product-item__amt">1,80\u20ac</span><div class="c-cat-product-item__tags">\n\t\t\t1,80\u20ac el litro\n\t\t</div></div></div><div class="c-cat-product-item__cart"><div class="o-cart-add js-cart-add" data-pack-qty=""><div class="o-cart-add__in-cart"><div class="o-cart-add__quantity"><span class="o-cart-add__quantity-n js-cart-add__qty">0</span><span class="o-cart-add__txt">unidad<span class="o-cart-add__txt-n">es</span> en el carro</span><a href="#" class="o-cart-add__remove js-cart-add__remove"></a></div><div class="o-cart-add__control"><div class="o-cart-add__edit"><a class="o-cart-add__btn o-cart-add__btn--less js-cart-add__qty-less" href="#">-</a><input class="o-cart-add__input js-cart-add__qty-input" type="text" value="0"><a href="#" class="o-cart-add__btn o-cart-add__btn--more js-cart-add__qty-more">+</a></div><div class="o-cart-add__format">\n                Brik 1 lt \n            </div></div></div><div class="o-cart-add__new u-valign-m"><button title="A\xf1adir este producto al carro" class="o-btn o-btn--block js-cart-add__new">A\xf1adir</button></div></div></div></div>'
+
+
+>>> response.css("div.c-cat-product-item__data a")[0].extract()
+u'<a href="/comprar/brik-de-caldo-online/gallina-blanca-caldo-de-pollo-15952/" title="Gallina Blanca Caldo de Pollo 472621" class="c-cat-product-item__href-name js-cat-product-item__lnk"><span class="c-cat-product-item__name-brand">Gallina Blanca</span><span class="c-cat-product-item__name-product">Caldo de Pollo</span></a>'
+
+OBTENIR ENLLAÇ
+>>> response.css("div.c-cat-product-item__data a::attr(href)")[0].extract()
+u'/comprar/brik-de-caldo-online/gallina-blanca-caldo-de-pollo-15952/'
+
+OBTENIR CÓDIGO
+(\w+)$
+>>> response.xpath("//meta[@name='description']/@content")[0].re('(\w+)$') 
+[u'8410300349068']
+
+     # follow links to author pages
+     # for href in response.css('.author + a::attr(href)').extract():
+
+    #     for href in response.css("div.c-cat-product-item__data a::attr(href)").extract():
+    #         yield scrapy.Request(response.urljoin(href),
+    #                             callback=self.parse_author)
+
+    # def parse_product(self, response):
+    #     yield {
+    #             'code': response.xpath("//meta[@name='description']/@content")[0].re('(\w+)$')   
+    #     }
+    #     filename = 'productInfo.html'
+    #     with open(filename, 'wb') as f:
+    #         f.write('code'+code)
+
+
+                        INSERT INTO `productes` (`id`, `nom`, `nota_global`, `img`, `sano`, `nota_sano`, `eco`, `nota_eco`, `com`, `nota_com`) VALUES
+(8410055150018, 'Agua Mineral Font Vella', 10, 'http://epicur.me/bioscan/imgs/8414892789868.jpg', 'Indicada para dietas pobres en sodio.', 9, 'Font Vella utiliza materiales sostenibles para producir sus botellas.', 10, 'Font Vella is the best!! - martarj', 10);
+
